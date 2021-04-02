@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/app.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat&display=swap" rel="stylesheet">
     <title>Pokemon Cards</title>
 </head>
 <body>
@@ -15,66 +18,94 @@
         <section>
             <h2>Add a new pokemon card here:</h2>
             <form id="add-card-form">
-                <label for="name">Name: </label>
-                <input type="text" id="name" placeholder="Enter pokemon name" required>
-                <label for="type">Type: </label>
-                <select id="type" required>
-                    <option value="" disabled=disabled selected>Select pokemon type</option>
-                    <option value="fire">Fire</option>
-                    <option value="water">Water</option>
-                    <option value="grass">Grass</option>
-                    <option value="lightning">Lightning</option>
-                    <option value="psychic">Psychic</option>
-                </select>
-                <label for="health">HP: </label>
-                <input type="number" id="health" min="0" step="10" required>
-
-                <section>
+                <div class="details">
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" placeholder="Enter pokemon name" required>
+                    <label for="type">Type: </label>
+                    <select id="type" required>
+                        <option value="" disabled=disabled selected>Select pokemon type</option>
+                        <option value="fire">Fire</option>
+                        <option value="water">Water</option>
+                        <option value="grass">Grass</option>
+                        <option value="lightning">Lightning</option>
+                        <option value="psychic">Psychic</option>
+                    </select>
+                    <label for="health">HP: </label>
+                    <input type="number" id="health" min="0" step="10" required>
+                </div>
+                <div class="move-one">
                     <label for="move-one" id="move-name">Move one: </label>
-                    <input type="text" placeholder="Enter move name" required>
-                    <label for="move-one-desc">Description: </label>
-                    <input type="text" id="move-one-desc" placeholder="Enter move description">
-                    <label for="move-one-damage">Damage: </label>
-                    <input type="number" id="move-one-damage" min="0" step="10">
+                    <input type="text" placeholder="Enter move name" id="move-one" required>
+                    <p>
+                        <label for="move-one-desc">Description: </label>
+                        <input type="text" id="move-one-desc" placeholder="Enter move description">
+                    </p>
+                    <p>
+                        <label for="move-one-damage">Damage: </label>
+                        <input type="number" id="move-one-damage" min="0" step="10">
+                    </p>
                     <label for="move-one-cost">Move cost: </label>
-                    <input type="number" min="0" placeholder="Type" id="move-one-cost" max="4">
+                    <input type="number" min="0" placeholder="colour" id="move-one-cost" max="4">
                     <label> + </label>
-                    <input type="number" min="0" placeholder="Basic" id="move-one-cost-basic" max="4">
+                    <input type="number" min="0" placeholder="basic" id="move-one-cost-basic" max="4">
                     <label for="move-one-cost-basic"> basic</label>
-                </section>
+                </div>
 
-                <section>
+                <div class="move-two">
                     <label for="move-two" id="move-name">Move two: </label>
-                    <input type="text" placeholder="Enter move name">
-                    <label for="move-two-desc">Description: </label>
-                    <input type="text" id="move-two-desc" placeholder="Enter move description">
-                    <label for="move-two-damage">Damage: </label>
-                    <input type="number" id="move-two-damage" min="0" step="10">
+                    <input type="text" placeholder="Enter move name" id="move-two">
+                    <p>
+                        <label for="move-two-desc">Description: </label>
+                        <input type="text" id="move-two-desc" placeholder="Enter move description">
+                    </p>
+                    <p>
+                        <label for="move-two-damage">Damage: </label>
+                        <input type="number" id="move-two-damage" min="0" step="10">
+                    </p>
                     <label for="move-two-cost">Move cost: </label>
                     <input type="number" min="0" placeholder="Type" id="move-two-cost" max="4">
                     <label> + </label>
                     <input type="number" min="0" placeholder="Basic" id="move-two-cost-basic" max="4">
                     <label for="move-two-cost-basic"> basic</label>
-                </section>
+                </div>
 
-                <section>
+                <div class="move-three">
                     <label for="move-three" id="move-name">Move three: </label>
-                    <input type="text" placeholder="Enter move name">
-                    <label for="move-three-desc">Description: </label>
-                    <input type="text" id="move-three-desc" placeholder="Enter move description">
-                    <label for="move-three-damage">Damage: </label>
-                    <input type="number" id="move-three-damage" min="0" step="10">
+                    <input type="text" placeholder="Enter move name" id="move-three">
+                    <p>
+                        <label for="move-three-desc">Description: </label>
+                        <input type="text" id="move-three-desc" placeholder="Enter move description">
+                    </p>
+                    <p>
+                        <label for="move-three-damage">Damage: </label>
+                        <input type="number" id="move-three-damage" min="0" step="10">
+                    </p>
                     <label for="move-three-cost">Move cost: </label>
                     <input type="number" min="0" placeholder="Type" id="move-three-cost" max="4">
                     <label> + </label>
                     <input type="number" min="0" placeholder="Basic" id="move-three-cost-basic" max="4">
                     <label for="move-three-cost-basic"> basic</label>
-                </section>
-                <input type="submit" value="Add card!">
+                </div>
+                <input type="submit" value="Add card!" id="submit">
             </form>
+            <button id="delete">Delete all</button>
         </section>
         <section id="pokemon-card-container">
-            <ul id="pokemon-card-list"></ul>
+            <ul id="pokemon-card-list">
+                <li>test</li>
+                <li>test2</li>
+                <li>
+                    <h2>Test 3</h2>
+                    <p>99HP</p>
+                    <p>Fire</p>
+                    <div>
+                        <div>2+1</div>
+                        <h4>Lightning bolt</h4>
+                        <p>Massive lightning strike to the baws</p>
+                        <p>40</p>
+                    </div>
+                </li>
+            </ul>
         </section>
     </main>
 </body>

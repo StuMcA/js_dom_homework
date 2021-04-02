@@ -1,0 +1,94 @@
+header {
+    background-color: darkolivegreen;
+    margin: 0;
+    padding: 10px;
+}
+
+body {
+    background-color: rgb(123, 123, 150);
+    color:darkgrey;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Indie flower';
+}
+
+h2 {
+    padding: 0 0 0 15px;
+}
+
+form {
+    margin: auto;
+    width: 90%;
+    padding: 5px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    "details details details"
+    "moveOne moveTwo moveThree"
+    "submit . delete";
+}
+
+.details {
+    grid-area: details;
+}
+
+.move-one, .move-two, .move-three {
+    border: 1px solid black;
+    margin: 2px;
+    padding: 3px;
+    background-color: gray;
+}
+
+.move-one {
+    grid-area: moveOne;
+}
+
+.move-two {
+    grid-area: moveTwo;
+}
+
+.move-three {
+    grid-area: moveThree;
+}
+
+#submit {
+    grid-area: submit;
+    width: 60%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+#delete {
+    grid-area: delete;
+    width: 40%;
+    margin: auto;
+}
+
+label {
+    /* margin-right: 15px; */
+}
+
+input, select {
+    background-color: darkmagenta;
+    color:darkorange;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+li {
+    width: 200px;
+    height: 280px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 3px;
+}
