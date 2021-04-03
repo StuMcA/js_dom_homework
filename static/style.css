@@ -30,7 +30,7 @@ form {
     grid-template-areas: 
     "details details details"
     "moveOne moveTwo moveThree"
-    "submit . delete";
+    "submit . .";
 }
 
 .details {
@@ -56,17 +56,26 @@ form {
     grid-area: moveThree;
 }
 
-#submit {
+#submit, #delete {
     grid-area: submit;
     width: 60%;
     margin: auto;
-    border-radius: 5px;
+    font-family: 'Montserrat';
+    background-color: darkcyan;
+    border: none;
+    box-shadow: 3px 3px 0 darkgoldenrod;
+    width: 80px;
 }
 
 #delete {
-    grid-area: delete;
-    width: 40%;
-    margin: auto;
+    width: 80px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Montserrat';
+    background-color: darkcyan;
+    border: none;
+    box-shadow: 3px 3px 0 darkgoldenrod;
 }
 
 label {
@@ -76,6 +85,7 @@ label {
 input, select {
     background-color: darkmagenta;
     color:darkorange;
+    font-family: 'Montserrat';
 }
 
 ul {
