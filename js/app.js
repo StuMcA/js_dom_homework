@@ -3,20 +3,28 @@ console.log('DOM loaded');
 
 const addCardForm = document.querySelector('#add-card-form');
 const deleteCards = document.querySelector('#delete');
+let iterator = 1;
 
     addCardForm.addEventListener('submit', (event) => {
         event.preventDefault();
-        createNewCard(event.target);
+        createNewCard(event.target, iterator);
+        iterator += 1;
     });
 
     deleteCards.addEventListener('click', handleDeleteAllClick)
 
+
 });
 
-const createNewCard = function(form) {
+const createNewCard = function(form, iterator) {
     const cardList = document.querySelector('#pokemon-card-list');
     const newCard = document.createElement('li');
     newCard.classList.add('pokemon-card');
+    newCard.setAttribute('id', `card-no${iterator}`);
+    console.log(newCard.id)
+    newCard.onclick = function() {
+        this.remove();
+    };
     cardList.appendChild(newCard);
 
     const name = document.createElement('h2');
@@ -51,7 +59,13 @@ const createNewCard = function(form) {
     moveOne.appendChild(moveOneDamage);
 }
 
-const handleDeleteAllClick = function(event) {
+const handleDeleteAllClick = function() {
     const pokemonCards = document.querySelector('#pokemon-card-list');
     pokemonCards.innerHTML ='';
 }
+
+// const handleDeleteOneClick = function(id) {
+//     const cardToRemove = document.getElementById(id);
+//     console.log(cardToRemove);
+//     cardToRemove.remove();
+// }

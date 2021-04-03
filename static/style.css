@@ -78,10 +78,6 @@ form {
     box-shadow: 3px 3px 0 darkgoldenrod;
 }
 
-label {
-    /* margin-right: 15px; */
-}
-
 input, select {
     background-color: darkmagenta;
     color:darkorange;
