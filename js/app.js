@@ -3,12 +3,10 @@ console.log('DOM loaded');
 
 const addCardForm = document.querySelector('#add-card-form');
 const deleteCards = document.querySelector('#delete');
-let iterator = 1;
 
     addCardForm.addEventListener('submit', (event) => {
         event.preventDefault();
-        createNewCard(event.target, iterator);
-        iterator += 1;
+        createNewCard(event.target);
     });
 
     deleteCards.addEventListener('click', handleDeleteAllClick)
@@ -16,12 +14,10 @@ let iterator = 1;
 
 });
 
-const createNewCard = function(form, iterator) {
+const createNewCard = function(form) {
     const cardList = document.querySelector('#pokemon-card-list');
     const newCard = document.createElement('li');
     newCard.classList.add('pokemon-card');
-    newCard.setAttribute('id', `card-no${iterator}`);
-    console.log(newCard.id)
     newCard.onclick = function() {
         this.remove();
     };
