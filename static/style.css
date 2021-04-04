@@ -10,6 +10,7 @@ body {
     color:rgb(73, 63, 63);
     margin: 0;
     font-family: 'Montserrat';
+    font-size: 14px;
 }
 
 h1 {
@@ -24,7 +25,7 @@ h2 {
 
 form {
     margin: auto;
-    width: 90%;
+    width: fit-content;
     padding: 5px;
     border: 1px solid black;
     display: grid;
@@ -176,4 +177,10 @@ li {
 }
 .grass {
     background-color: rgb(53, 119, 70);
+}
+
+hr {
+    background-color: black;
+    border: none;
+    height: 1px;
 }
