@@ -2,11 +2,12 @@ header {
     background-color: darkolivegreen;
     margin: 0;
     padding: 10px;
+    color: rgb(193, 193, 193);
 }
 
 body {
     background-color: rgb(123, 123, 150);
-    color:darkgrey;
+    color:rgb(73, 63, 63);
     margin: 0;
     font-family: 'Montserrat';
 }
@@ -100,8 +101,79 @@ li {
     background-color: rgb(39, 33, 33);
 }
 
+.pokemon-card header {
+    height: 20px;
+    font-size: 10px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pokemon-card header * {
+    margin: auto 5px;
+}
+
+.pokemon-card header h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.pokemon-image {
+    height: 120px;
+    width: 180px;
+    background-image: url('https://www.fillmurray.com/180/120');
+    border: 1px solid black;
+    margin: 4px auto;
+}
+
+.pokemon-card div {
+    display: grid;
+    grid-template-areas: "cost title damage"
+    "cost description damage";
+}
+
+.pokemon-card div * {
+    margin: auto;
+}
+
+.pokemon-card div div {
+    grid-area: cost;
+}
+
+.pokemon-card div h4 {
+    grid-area: title;
+    font-size: 12px;
+}
+
+.description {
+    grid-area: description;
+    font-size: 10px;
+}
+
+.damage {
+    grid-area: damage;
+}
+
 .pokemon-card:hover {
     margin: -15px 7px 18px -1px;
     box-shadow: 6px 11px 3px rgb(69, 66, 66, 0.5);
     /* z-index: -1; */
+}
+
+.fire {
+    background-color: rgb(219, 89, 89);
+}
+.lightning {
+    background-color: rgb(160, 161, 90);
+}
+.water {
+    background-color: rgb(70, 104, 156);
+}
+.psychic {
+    background-color: rgb(151, 78, 200);
+}
+.grass {
+    background-color: rgb(53, 119, 70);
 }

@@ -33,7 +33,14 @@
                     </select>
                     <label for="health">HP: </label>
                     <input type="number" id="health" min="0" step="10" required>
+                    <label for="move-count">No. moves: </label>
+                    <select name="move-count" id="move-count">
+                        <option value="one" selected>One</option>
+                        <option value="two">Two</option>
+                        <option value="three">Three</option>
+                    </select>
                 </div>
+
                 <div class="move-one">
                     <label for="move-one" id="move-name">Move one: </label>
                     <input type="text" placeholder="Enter move name" id="move-one" required>
@@ -92,17 +99,18 @@
         </section>
         <section id="pokemon-card-container">
             <ul id="pokemon-card-list">
-                <li class="pokemon-card">test</li>
-                <li class="pokemon-card">test2</li>
-                <li class="pokemon-card">
-                    <h2>Test 3</h2>
-                    <p>99HP</p>
-                    <p>Fire</p>
+                <li class="pokemon-card lightning">
+                    <header>
+                        <h2>Pikachu</h2>
+                        <p>40HP</p>
+                        <p>Lightning</p>
+                    </header>
+                    <div class="pokemon-image"></div>
                     <div>
                         <div>2+1</div>
-                        <h4>Lightning bolt</h4>
-                        <p>Massive lightning strike to the baws</p>
-                        <p>40</p>
+                        <h4>Thunder Jolt</h4>
+                        <p class="description">Massive lightning strike to the baws</p>
+                        <p class="damage">30</p>
                     </div>
                 </li>
             </ul>
